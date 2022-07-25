@@ -1,0 +1,29 @@
+*{
+  padding: 10px;
+  border-radius: 4px;
+box-sizing: border-box;
+color: black;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+*:hover {
+  box-shadow: 10px 5px 5px grey;
+}
+body{
+  width: 1000px;
+  margin:0 auto;
+  background-color: #F4F5F5;
+}
+header {
+  /* display: flex; */
+  
+
+}
+header div{
+  display: flex;
+  background-color: #FFFFFF;
+}
+
+header img {
+display: flex;
+width: 300px;
+}
