@@ -41,11 +41,11 @@ function App() {
             <div>
               <h3 key={index}>{categories.name}</h3>
               {data.categories.map((meals, index) => {
-                // console.log(meals[index]);
+                console.log(meals[index]);
                 return isLoading ? (
                   <span>En cours de chargement... </span>
                 ) : (
-                  <h4 key={index}>{meals[index].title}</h4>
+                  <h4 key={index}>{meals[index]}</h4>
                 );
               })}
               {/* <p>{categories.meals[index].decription}</p> */}

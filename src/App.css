@@ -7,6 +7,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 *:hover {
   box-shadow: 10px 5px 5px grey;
+  border: solid red 1px;
 }
 body{
   width: 1000px;
