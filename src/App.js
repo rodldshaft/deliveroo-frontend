@@ -33,15 +33,20 @@ function App() {
         </div>
       </header>
       <section>
-        {data.categories.map((categories, index) => {
+        {data.categories.map((category, index) => {
           // console.log(categories.meals[index]);
 
           return (
             <div key={index}>
-              <h3>{categories.name}</h3>
-              {categories.meals.map((meals, index) => {
+              <h3>{category.name}</h3>
+              {category.meals.map((meal, index) => {
                 // console.log(meal[index]);
-                return <h4 key={index}>{meals[index]}</h4>; //
+                return (
+                  <div>
+                    {" "}
+                    <h4 key={index}>{meal[index]}</h4>
+                  </div>
+                ); //
               })}
             </div>
           );

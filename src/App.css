@@ -22,8 +22,13 @@ header {
 header div{
   display: flex;
   background-color: #FFFFFF;
+  
 }
 
+section div{
+  background-color: white;
+  margin: 20px 0;
+}
 header img {
 display: flex;
 width: 300px;
