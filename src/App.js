@@ -24,7 +24,7 @@ function App() {
   return isLoading ? (
     <span>En cours de chargement... </span>
   ) : (
-    <body>
+    <div>
       <header>
         <h2>{data.restaurant.name}</h2>
         <div>
@@ -35,25 +35,19 @@ function App() {
       <section>
         {data.categories.map((categories, index) => {
           // console.log(categories.meals[index]);
-          return isLoading ? (
-            <span>En cours de chargement... </span>
-          ) : (
-            <div>
-              <h3 key={index}>{categories.name}</h3>
-              {data.categories.map((meals, index) => {
-                console.log(meals[index]);
-                return isLoading ? (
-                  <span>En cours de chargement... </span>
-                ) : (
-                  <h4 key={index}>{meals[index]}</h4>
-                );
+
+          return (
+            <div key={index}>
+              <h3>{categories.name}</h3>
+              {categories.meals.map((meals, index) => {
+                // console.log(meal[index]);
+                return <h4 key={index}>{meals[index]}</h4>; //
               })}
-              {/* <p>{categories.meals[index].decription}</p> */}
             </div>
           );
         })}
       </section>
-    </body>
+    </div>
   );
 }
 
