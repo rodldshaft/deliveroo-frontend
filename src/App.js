@@ -42,9 +42,8 @@ function App() {
               {category.meals.map((meal, index) => {
                 // console.log(meal[index]);
                 return (
-                  <div>
-                    {" "}
-                    <h4 key={index}>{meal[index]}</h4>
+                  <div key={index}>
+                    <h4>{meal[index]}</h4>
                   </div>
                 ); //
               })}
