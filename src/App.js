@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import "./assets/css/fonts.css";
 import axios from "axios";
 
 function App() {
@@ -25,28 +26,78 @@ function App() {
     <span>En cours de chargement... </span>
   ) : (
     <div>
-      <header>
-        <h2>{data.restaurant.name}</h2>
-        <div>
-          <p>{data.restaurant.description}</p>
-          <img src={data.restaurant.picture} alt="header image" />
-        </div>
+      <header className="header">
+        <img src="../src/assets/img/logo-teal.svg" alt="logo" />
       </header>
+      <div className="restback">
+        <section className="restaurant">
+          <div>
+            <h2>{data.restaurant.name}</h2>
+            <p>{data.restaurant.description}</p>
+          </div>
+          <div>
+            <img
+              className="picturehead"
+              src={data.restaurant.picture}
+              alt="header image"
+            />
+          </div>
+        </section>
+      </div>
+
       <section>
         {data.categories.map((category, index) => {
-          // console.log(categories.meals[index]);
-
           return (
-            <div key={index}>
-              <h3>{category.name}</h3>
-              {category.meals.map((meal, index) => {
-                // console.log(meal[index]);
-                return (
-                  <div key={index}>
-                    <h4>{meal[index]}</h4>
-                  </div>
-                ); //
-              })}
+            <div className="category" key={index}>
+              {category.name !== "Sandwichs baguette" ? (
+                category.name !== "Desserts" ? (
+                  category.name !== "Boissons fraîches" ? (
+                    category.name !== "Epicerie bio" ? (
+                      category.name !== "Repas corporate" ? (
+                        category.name !== "Couverts" ? (
+                          <h3>{category.name}</h3>
+                        ) : (
+                          ""
+                        )
+                      ) : (
+                        ""
+                      )
+                    ) : (
+                      ""
+                    )
+                  ) : (
+                    ""
+                  )
+                ) : (
+                  ""
+                )
+              ) : (
+                ""
+              )}
+              <div className="meals">
+                {category.meals.map((meal, index) => {
+                  // console.log(meal[index]);
+                  return (
+                    <nav className="thumbnail" key={index}>
+                      <div className="left">
+                        <h4>{meal.title}</h4>
+                        <p className="description">{meal.description}</p>
+                        <p className="price">
+                          {meal.price} €
+                          {meal.popular === true && (
+                            <span className="popular"> ★ Populaire</span>
+                          )}
+                        </p>
+                      </div>
+                      <div className="rigth">
+                        {meal.picture && (
+                          <img src={meal.picture} alt="picture of title" />
+                        )}
+                      </div>
+                    </nav>
+                  ); //
+                })}
+              </div>
             </div>
           );
         })}

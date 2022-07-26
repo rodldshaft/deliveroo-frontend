@@ -1,35 +1,217 @@
-*{
-  padding: 10px;
+@import "./assets/css/reset.css";
+* {
+
   border-radius: 4px;
 box-sizing: border-box;
-color: black;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
-*:hover {
-  box-shadow: 10px 5px 5px grey;
-  border: solid red 1px;
-}
+
+
 body{
-  width: 1000px;
+  /* width: 1200px; */
   margin:0 auto;
   background-color: #F4F5F5;
 }
-header {
-  /* display: flex; */
-  
-
+section {
+  width: 1200px;
+  margin:0 auto;
 }
-header div{
+.header{
   display: flex;
-  background-color: #FFFFFF;
-  
-}
-
-section div{
-  background-color: white;
-  margin: 20px 0;
+  justify-content:flex-start;
+ height: 59px;
+ background-color: white;
+ width: 100%;
+ /* border: solid black 1px; */
+ object-fit: cover;
 }
 header img {
+  width: 1200px;
+  margin:0 auto;
+  object-fit: contain;
+}
+div .restback {
+  width: 100%;
+  /* margin:auto; */
+  /* border: solid black 1px; */
+  background-color: #FFFFFF;
+}
+
+
+header div {
+  display: flex;
+  background-color: #FFFFFF;
+}
+ 
+.restaurant {
+  height: 257px;
+  /* width: 100rem; */
 display: flex;
-width: 300px;
+flex-direction: row;
+/* height: 100%; */
+background-color: #FFFFFF;
+/* justify-content: space-between; */
+margin-bottom:  1rem ;
+}
+
+ .restaurant div {
+  height: 257px;
+  display: flex;
+  align-items: center;
+display: flex;
+flex-direction: column;
+/* width: 70%; */
+background-color: #FFFFFF;
+justify-content: center;
+}
+
+section .restaurent>img {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+   height: 200px;
+   width: 350px;
+   /* object-fit: contain; */
+   border-radius: 4px;
+}
+
+.picturehead {
+/* width: 30%; */
+height: 200px;
+width: 350px;
+margin: 0 1rem;
+}
+
+h2 {
+  width: 100%;
+  font-family: "IBM Plex Sans bold",'Courier New', Courier, monospace;
+  font-size: 2Rem;
+  color: #2E3333;
+  line-height: 26.7px;
+  padding: 3rem 0;
+  text-align: left;
+  /* border: solid black 1px; */
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+/* structure vignettes */
+.category {
+display: flex;
+flex-direction: column;
+}
+
+h3 {
+  font-family:"IBM Plex Sans bold","Stratos Deliveroo Web" ;
+  font-size: 24px;
+  line-height: 20px;
+  margin: 1.5rem 0;
+}
+
+.meals { 
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 400px; 
+   height: 160px;
+  display: flex;
+  margin-right:  1.25rem;
+  margin-bottom:  1.5rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.thumbnail .left {
+  /* flex-direction: column; */
+/* align-content: space-between; */
+/* box-sizing: border-box; */
+}
+
+.thumbnail .rigth{
+  display: flex;
+}
+
+/* contenue vignette left */
+h4 {
+  font-family: "IBM Plex Sans";
+  font-size: 18px;
+  line-height: 15.6px;
+  color:#2E3333;
+  display: flex;
+}
+
+.description {
+  height: 40px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.thumbnail .left p{
+  font-family: "IBM Plex Sans", Helvetica, sans-serif,"IBM Plex Sans",'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 20px;
+  color: #808484;
+  overflow: hidden;
+}
+.price {
+  font-size:  17px;
+  line-height: 14.7px;
+  color: #808484;
+  display: flex;
+}
+
+/* effet vignettes */
+.thumbnail:hover {
+  box-shadow: 0px 15px 25px #E4E9E9;
+}
+
+section nav {
+  display: flex;
+  width: 400px; 
+ height: 160px;
+ justify-content: center;
+ align-items: center;
+  /* justify-content: space-between; */
+  background-color: white;
+  /* margin: 20px 0; */
+  flex-direction: column;
+  /* width: 100%;
+  height: 100%; */
+  /* border: dashed blue 1px; */
+}
+
+header img {
+display: flex;
+/* width: 300px; */
+}
+
+img {
+  display: flex;
+  height: 130px;
+  width: 130px;
+  align-items: center;
+  object-fit:cover;
+  /* border: solid rgb(212, 0, 255) 1px; */
+}
+
+.def div {
+height: 100%;
+}
+
+p {
+  font-size: 19px;
+  line-height: 28.8px;
+  color: #868A8A;
+  font-family: "IBM Plex Sans",'Courier New', Courier, monospace;
+}
+
+.popular {
+  color: #FF8001;
+  font-family: "IBM Plex Sans bold",'Courier New', Courier, monospace;
+  padding-left: 1rem;
 }
